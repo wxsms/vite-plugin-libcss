@@ -5,14 +5,12 @@ let viteConfig;
 
 module.exports = function () {
   return {
-    name: 'lib-inject-css',
+    name: 'lib-css',
     apply: 'build',
     enforce: 'post',
-
     configResolved (resolvedConfig) {
       viteConfig = resolvedConfig;
     },
-
     writeBundle (_, bundle) {
       const files = Object.keys(bundle);
       const cssFile = files.find((v) => v.endsWith('.css'));
