@@ -1,19 +1,19 @@
-import fs from 'fs';
-import { resolve } from 'path';
+const fs = require('fs');
+const { resolve } = require('path');
 
 let viteConfig;
 
-export default function() {
+module.exports = function () {
   return {
     name: 'lib-inject-css',
     apply: 'build',
     enforce: 'post',
 
-    configResolved(resolvedConfig) {
+    configResolved (resolvedConfig) {
       viteConfig = resolvedConfig;
     },
 
-    writeBundle(_, bundle) {
+    writeBundle (_, bundle) {
       const files = Object.keys(bundle);
       const cssFile = files.find((v) => v.endsWith('.css'));
       if (!cssFile) {
@@ -32,4 +32,4 @@ export default function() {
       }
     },
   };
-}
+};
