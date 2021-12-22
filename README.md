@@ -29,3 +29,5 @@ export default defineConfig({
   ],
 });
 ```
+
+Note that this plugin can only work with [library-mode](https://vitejs.dev/guide/build.html#library-mode).
