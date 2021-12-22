@@ -1,11 +1,26 @@
 {
   "name": "vite-plugin-libcss",
+  "description": "This plugin will inject css into bundled js file using `import` statement.",
   "version": "1.0.1",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "wxsms@foxmail.com",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxsms/vite-plugin-libcss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wxsms/vite-plugin-libcss/issues"
+  },
+  "homepage": "https://github.com/wxsms/vite-plugin-libcss#readme",
+  "keywords": [
+    "vite",
+    "plugin",
+    "lib",
+    "css"
+  ],
   "devDependencies": {
     "vite": "2.7.5"
   },
