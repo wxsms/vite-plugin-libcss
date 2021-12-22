@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "vite": "^2.7.5"
+    "vite": "2.7.5"
   },
   "peerDependencies": {
     "vite": "^2"
