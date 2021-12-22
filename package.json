@@ -1,0 +1,15 @@
+{
+  "name": "vite-plugin-libcss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": "wxsms@foxmail.com",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "vite": "^2.7.5"
+  },
+  "peerDependencies": {
+    "vite": "^2"
+  }
+}
