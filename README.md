@@ -30,4 +30,4 @@ export default defineConfig({
 });
 ```
 
-Note that this plugin can only work with [library-mode](https://vitejs.dev/guide/build.html#library-mode).
+Note that this plugin will only work with [library-mode](https://vitejs.dev/guide/build.html#library-mode) and es format build.
