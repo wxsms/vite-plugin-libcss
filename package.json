@@ -22,7 +22,7 @@
     "css"
   ],
   "devDependencies": {
-    "vite": "2.7.5"
+    "vite": "2.7.13"
   },
   "peerDependencies": {
     "vite": "^2"
