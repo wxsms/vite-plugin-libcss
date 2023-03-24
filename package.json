@@ -25,6 +25,6 @@
     "vite": "2.7.5"
   },
   "peerDependencies": {
-    "vite": "^2"
+    "vite": "*"
   }
 }
