@@ -1,3 +1,8 @@
-import type { ResolvedConfig, PluginOption } from 'vite';
+import type { PluginOption } from 'vite';
 
-export default function (): PluginOption
+type LibCssOptions = {
+  include?: string;
+  exclude?: string | string[];
+}
+
+export default function (option: LibCssOptions): PluginOption

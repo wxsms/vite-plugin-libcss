@@ -1,22 +1,23 @@
 const fs = require('fs');
 const { resolve } = require('path');
+const minimatch = require('minimatch');
 
 let viteConfig;
 
-module.exports = function () {
+module.exports = function (options = {}) {
   return {
     name: 'lib-css',
     apply: 'build',
     enforce: 'post',
 
-    configResolved (resolvedConfig) {
+    configResolved(resolvedConfig) {
       viteConfig = resolvedConfig;
     },
 
-    writeBundle (option, bundle) {
+    writeBundle(option, bundle) {
       if (!viteConfig.build || !viteConfig.build.lib) {
         // only for lib build
-        console.warn('vite-plugin-libcss only works in lib mode.')
+        console.warn('vite-plugin-libcss only works in lib mode.');
         return;
       }
       if (option.format !== 'es') {
@@ -33,6 +34,15 @@ module.exports = function () {
           // only for entry
           continue;
         }
+        if (options.include && !minimatch(file, options.include)) {
+          // check if the file matches the include pattern
+          continue;
+        }
+        if (options.exclude && minimatch(file, options.exclude)) {
+          // check if the file matches the exclude pattern
+          continue;
+        }
+        console.log(file);
         const outDir = viteConfig.build.outDir || 'dist';
         const filePath = resolve(viteConfig.root, outDir, file);
         const data = fs.readFileSync(filePath, {
