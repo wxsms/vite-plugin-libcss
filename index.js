@@ -42,7 +42,6 @@ module.exports = function (options = {}) {
           // check if the file matches the exclude pattern
           continue;
         }
-        console.log(file);
         const outDir = viteConfig.build.outDir || 'dist';
         const filePath = resolve(viteConfig.root, outDir, file);
         const data = fs.readFileSync(filePath, {
