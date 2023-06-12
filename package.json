@@ -22,10 +22,12 @@
     "css"
   ],
   "devDependencies": {
-    "minimatch": "^9.0.1",
     "vite": "2.7.5"
   },
   "peerDependencies": {
     "vite": "*"
+  },
+  "dependencies": {
+    "minimatch": "^9.0.1"
   }
 }
