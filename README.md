@@ -30,4 +30,22 @@ export default defineConfig({
 });
 ```
 
+or with include/exclude options 
+
+```js
+// vite.config.js
+import libCss from 'vite-plugin-libcss';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    // any other plugins
+    libCss({
+      include: 'src/**/*', // Include all entry files
+      exclude: 'src/utils/*', // Exclude entry files in the "utils" directory
+    })
+  ],
+});
+```
+
 Note that this plugin will only work with [library-mode](https://vitejs.dev/guide/build.html#library-mode) and es format build.

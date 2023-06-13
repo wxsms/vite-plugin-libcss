@@ -26,5 +26,8 @@
   },
   "peerDependencies": {
     "vite": "*"
+  },
+  "dependencies": {
+    "minimatch": "^9.0.1"
   }
 }
