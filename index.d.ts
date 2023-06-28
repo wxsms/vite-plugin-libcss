@@ -5,4 +5,4 @@ type LibCssOptions = {
   exclude?: string;
 }
 
-export default function (option: LibCssOptions): PluginOption
+export default function (option?: LibCssOptions): PluginOption
