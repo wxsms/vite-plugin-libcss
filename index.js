@@ -47,7 +47,10 @@ module.exports = function (options = {}) {
         const data = fs.readFileSync(filePath, {
           encoding: 'utf8',
         });
-        fs.writeFileSync(filePath, `import './${cssFile}';\n${data}`);
+
+        const filePathDepth = file.split('/').length - 1;
+        const relativePath = Array(filePathDepth).fill('../').join('');
+        fs.writeFileSync(filePath, `import './${relativePath}${cssFile}';\n${data}`);
       }
     },
   };
