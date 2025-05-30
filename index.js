@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { resolve } = require('path');
-const minimatch = require('minimatch');
+const { minimatch } = require('minimatch');
 
 let viteConfig;
 
